@@ -3,6 +3,8 @@
 
 services:
     dashy:
+        container_name: Dashy
+
         # To build from source, replace 'image: lissy93/dashy' with 'build: .'
         # build: .
         image: lissy93/dashy
