@@ -34,6 +34,13 @@ services:
     # Specify restart policy
     restart: unless-stopped
 
+    labels:
+      - "traefik.http.routers.dashy.middlewares=dashy-mw"
+      - "traefik.http.middlewares.dashy-mw.headers.accesscontrolallowmethods=GET,OPTIONS,PUT"
+      - "traefik.http.middlewares.dashy-mw.headers.accesscontrolalloworiginlist=[***Your Domain Name or Wildcard***]"
+      - "traefik.http.middlewares.dashy-mw.headers.accesscontrolmaxage=100"
+      - "traefik.http.middlewares.dashy-mw.headers.addvaryheader=true"
+
     # Configure healthchecks
     # healthcheck:
     #   test: ["CMD", "node", "/app/services/healthcheck"]
