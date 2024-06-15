@@ -9,9 +9,9 @@ services:
         container_name: dashy
         # Pass in your config file below, by specifying the path on your host machine
         volumes:
-            - ./public/conf.yml:/app/public/conf.yml #RUTA-A-TU-CONFIG-PERSONALIZADO
+            - ./public/conf.yml:/app/user-data/conf.yml #RUTA-A-TU-CONFIG-PERSONALIZADO
         ports:
-            - 4000:80
+            - 4000:8080
         # Set any environmental variables
         environment:
             - NODE_ENV=production
@@ -21,9 +21,9 @@ services:
         # Specify restart policy
         restart: unless-stopped
         # Configure healthchecks
-        healthcheck:
-            test: ['CMD', 'node', '/app/services/healthcheck']
-            interval: 1m30s
-            timeout: 10s
-            retries: 3
-            start_period: 40s
+        # healthcheck:
+        #     test: ['CMD', 'node', '/app/services/healthcheck']
+        #     interval: 1m30s
+        #     timeout: 10s
+        #     retries: 380
+        #     start_period: 40s
