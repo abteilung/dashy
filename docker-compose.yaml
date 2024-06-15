@@ -34,14 +34,6 @@ services:
     # Specify restart policy
     restart: unless-stopped
 
-    labels:
-      - "traefik.http.routers.dashy.middlewares=dashy-mw"
-      - "traefik.http.middlewares.dashy-mw.headers.accesscontrolallowmethods=GET,OPTIONS,PUT"
-      - "traefik.http.middlewares.dashy-mw.headers.accesscontrolalloworiginlist=*.abteilung.ch"
-      - "traefik.http.middlewares.dashy-mw.headers.accesscontrolmaxage=100"
-      - "traefik.http.middlewares.dashy-mw.headers.addvaryheader=true"
-      - "traefik.http.routers.dashy.rule=Host(`abteilung.ch`)"
-
     # Configure healthchecks
     # healthcheck:
     #   test: ["CMD", "node", "/app/services/healthcheck"]
