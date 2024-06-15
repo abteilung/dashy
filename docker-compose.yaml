@@ -26,6 +26,7 @@ services:
 
     # Set any environmental variables
     environment:
+      - VUE_APP_DOMAIN=https://dashy.abteilung.ch
       - NODE_ENV=production
       # Specify your user ID and group ID. You can find this by running `id -u` and `id -g`
       - UID=0
