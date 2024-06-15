@@ -7,7 +7,7 @@ services:
     container_name: Dashy
 
     # Pull latest image from DockerHub
-    image: lissy93/dashy
+    image: lissy93/dashy:3
 
     # To build from source, replace 'image: lissy93/dashy' with 'build: .'
     # build: .
@@ -28,8 +28,8 @@ services:
     environment:
       - NODE_ENV=production
     # Specify your user ID and group ID. You can find this by running `id -u` and `id -g`
-    #  - UID=1000
-    #  - GID=1000
+     - UID=0
+     - GID=0
 
     # Specify restart policy
     restart: unless-stopped
