@@ -40,6 +40,7 @@ services:
       - "traefik.http.middlewares.dashy-mw.headers.accesscontrolalloworiginlist=*.abteilung.ch"
       - "traefik.http.middlewares.dashy-mw.headers.accesscontrolmaxage=100"
       - "traefik.http.middlewares.dashy-mw.headers.addvaryheader=true"
+      - "traefik.http.routers.dashy.rule=Host(`abteilung.ch`)"
 
     # Configure healthchecks
     # healthcheck:
