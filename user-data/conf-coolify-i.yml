@@ -1,0 +1,112 @@
+pageInfo:
+  title: Coolify Server I
+  description: Metrics for Server I
+sections:
+  - name: Meine Coolify I IP
+    icon: mdi-alien
+    widgets:
+      - type: public-ip
+      - type: stock-price-chart
+        options:
+          stock: AAPL
+          apiKey: A9YJX3JOPSYIFL4F
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: abteilung.ch
+        description: our Website
+        url: https://abteilung.ch
+        target: newtab
+      - title: coolify
+        description: Our Containered Hostings
+        url: https://app.coolify.io/
+        target: newtab
+      - title: Hetzner
+        description: Our Servers
+        url: https://accounts.hetzner.com/login
+        target: newtab
+      - title: plausible.abteilung.ch
+        url: https://plausible.abteilung.ch/
+        target: newtab
+      - title: Cron Editor
+        description: Cron editor
+        url: https://cronexpressiontogo.com/every-day-at-9am
+        target: newtab
+      - title: Random Keygen
+        url: https://randomkeygen.com/
+        target: newtab
+      - title: Pastefy
+        url: https://pastefy.abteilung.ch
+        target: newtab
+      - title: Vaultwarden
+        url: https://vaultwarden.abteilung.ch
+        target: newtab
+  - name: Important Shortcuts
+    icon: mdi-alien
+    items:
+      - title: Dashy Live
+        description: Development a project management links for Dashy
+        icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
+        url: https://live.dashy.to/
+        target: newtab
+      - title: GitHub
+        description: Our Github Account
+        url: https://github.com/abteilung
+        icon: favicon
+      - title: Showcase
+        description: See how others are using Dashy
+        url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
+        icon: far fa-grin-hearts
+      - title: Config Guide
+        description: See full list of configuration options
+        url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
+        icon: fas fa-wrench
+      - title: Support
+        description: Get help with Dashy, raise a bug, or get in contact
+        url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
+        icon: far fa-hands-helping
+  - name: kuma
+    widgets:
+      - type: gl-disk-space
+        options:
+          hostname: https://glances.coolify1.abteilung.tools
+      - type: gl-current-cpu
+        options:
+          hostname: https://glances.coolify1.abteilung.tools
+      - type: uptime-kuma
+        useProxy: true
+        options:
+          apiKey: uk1_x_Vm5Qx_CWUoEQhChyowE7cWWBejBO20JYZ8po62
+          url: https://uptime.abteilung.ch/metrics
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 2
+      collapsed: false
+      hideForGuests: false
+  - name: man
+    widgets:
+      - type: gl-system-load
+        options:
+          hostname: https://glances.coolify1.abteilung.tools
+      - type: gl-current-cores
+        options:
+          hostname: https://glances.coolify1.abteilung.tools
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items: []
+pages:
+  - name: 1️⃣ Coolify I
+    path: ./user-data/conf-coolify-i.yml
+  - name: 2️⃣ Coolify II
+    path: ./user-data/conf-coolify-ii.yml
+  - name: 🆘 Legacy-Server
+    path: ./user-data/conf-legacy-server.yml

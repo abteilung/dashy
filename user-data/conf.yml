@@ -1,48 +1,134 @@
 pageInfo:
-  title: Dashy
-  description: Welcome to your new dashboard!
+  title: dash.abteilung.ch
+  description: The Things we must watch
   navLinks:
     - title: GitHub
       path: https://github.com/Lissy93/dashy
     - title: Documentation
       path: https://dashy.to/docs
+pages:
+  - name: 1️⃣ Coolify I
+    path: ./user-data/conf-coolify-i.yml
+  - name: 2️⃣ Coolify II
+    path: ./user-data/conf-coolify-ii.yml
+  - name: 🦮 Legacy-Server
+    path: ./user-data/conf-legacy-server.yml
+
 appConfig:
-  theme: colorful
+  theme: argon
   layout: auto
-  iconSize: medium
+  statusCheck: true
+  iconSize: small
+  colCount: 4
+  rowCount: 3
+  customColors:
+    argon:
+      primary: "#aabbc3"
+      background: "#141b33"
+      background-darker: "#060913"
+
 sections:
-  - name: Getting Started
-    icon: mdi-alien
+  - name: My IP
+    icon: mdi-ip-network
+    widgets:
+      - type: public-ip
+    displayData:
+      sortBy: reverse-alphabetical
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+
+  - name: Coolify I
+    icon: mdi-numeric-1-circle
+    widgets:
+      - type: gl-current-cpu
+        options:
+          hostname: https://glances.coolify1.abteilung.tools
+      - type: gl-system-load
+        options:
+          hostname: https://glances.coolify1.abteilung.tools
+      - type: gl-disk-space
+        options:
+          hostname: https://glances.coolify1.abteilung.tools
+    displayData:
+      sortBy: reverse-alphabetical
+      rows: 3
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+
+  - name: Coolify II
+    icon: mdi-numeric-2-circle
+    widgets:
+      - type: gl-current-cpu
+        options:
+          hostname: https://glances.coolify2.abteilung.tools
+      - type: gl-system-load
+        options:
+          hostname: https://glances.coolify2.abteilung.tools
+      - type: gl-disk-space
+        options:
+          hostname: https://glances.coolify2.abteilung.tools
+    displayData:
+      sortBy: default
+      rows: 3
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+  - name: Legacy
+    icon: mdi-one-up
+    widgets:
+      - type: gl-current-cpu
+        options:
+          hostname: https://glances.legacy.abteilung.tools
+      - type: gl-system-load
+        options:
+          hostname: https://glances.legacy.abteilung.tools
+      - type: gl-disk-space
+        options:
+          hostname: https://glances.legacy.abteilung.tools
+    displayData:
+      sortBy: default
+      rows: 3
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+
+  - name: Server
+    icon: mdi-ip-network
     items:
-      - title: Dashy Live
-        description: Development a project management links for Dashy
-        icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-        url: https://live.dashy.to/
+      - title: abteilung.ch
+        description: our Website
+        url: https://abteilung.ch
         target: newtab
-        id: 0_1481_dashylive
-      - title: GitHub
-        description: Our Github Account
-        url: https://github.com/abteilung
-        icon: favicon
-        id: 1_1481_github
-      - title: Docs
-        description: Configuring & Usage Documentation
-        provider: Dashy.to
-        icon: far fa-book
-        url: https://dashy.to/docs
-        id: 2_1481_docs
-      - title: Showcase
-        description: See how others are using Dashy
-        url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
-        icon: far fa-grin-hearts
-        id: 3_1481_showcase
-      - title: Config Guide
-        description: See full list of configuration options
-        url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
-        icon: fas fa-wrench
-        id: 4_1481_configguide
-      - title: Support
-        description: Get help with Dashy, raise a bug, or get in contact
-        url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
-        icon: far fa-hands-helping
-        id: 5_1481_support
+      - title: app.coolify.io
+        description: Coolify Management
+        url: https://app.coolify.io
+        target: newtab
+
+    displayData:
+      sortBy: reverse-alphabetical
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+
+  - name: Even Otherer Stuff
+    icon: mdi-ip-network
+    items:
+      - title: abteilung.ch
+        description: our Website
+        url: https://abteilung.ch
+        target: newtab
+      - title: app.coolify.io
+        description: Coolify Management
+        url: https://app.coolify.io
+        target: newtab
+
+    displayData:
+      sortBy: reverse-alphabetical
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false

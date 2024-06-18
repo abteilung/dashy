@@ -1,0 +1,116 @@
+pageInfo:
+  title: Dashy
+  description: Welcome to your new dashboard!
+  navLinks:
+    - title: GitHub
+      path: https://github.com/Lissy93/dashy
+    - title: Documentation
+      path: https://dashy.to/docs
+appConfig:
+  theme: argon
+  layout: auto
+  statusCheck: true
+  iconSize: small
+  colCount: 5
+  customColors:
+    argon:
+      primary: "#aabbc3"
+      background: "#141b33"
+      background-darker: "#060913"
+sections:
+  - name: My IP
+    icon: mdi-alien
+    widgets:
+      - type: public-ip
+        id: 0_383_publicip
+      - type: stock-price-chart
+        options:
+          stock: NET
+          apiKey: A9YJX3JOPSYIFL4F
+
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: abteilung.ch
+        description: our Website
+        url: https://abteilung.ch
+        target: newtab
+        id: 0_383_abteilungch
+      - title: coolify
+        description: Our Containered Hostings
+        url: https://app.coolify.io/
+        target: newtab
+        id: 1_383_coolify
+      - title: Hetzner
+        description: Our Servers
+        url: https://accounts.hetzner.com/login
+        target: newtab
+        id: 2_383_hetzner
+      - title: plausible.abteilung.ch
+        url: https://plausible.abteilung.ch/
+        target: newtab
+        id: 3_383_plausibleabteilungch
+      - title: Cron Editor
+        description: Cron editor
+        url: https://cronexpressiontogo.com/every-day-at-9am
+        target: newtab
+        id: 4_383_croneditor
+      - title: Random Keygen
+        url: https://randomkeygen.com/
+        target: newtab
+        id: 5_383_randomkeygen
+  - name: Getting Started
+    icon: mdi-alien
+    items:
+      - title: Dashy Live
+        description: Development a project management links for Dashy
+        icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
+        url: https://live.dashy.to/
+        target: newtab
+        id: 0_1481_dashylive
+      - title: GitHub
+        description: Our Github Account
+        url: https://github.com/abteilung
+        icon: favicon
+        id: 1_1481_github
+      - title: Showcase
+        description: See how others are using Dashy
+        url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
+        icon: far fa-grin-hearts
+        id: 2_1481_showcase
+      - title: Config Guide
+        description: See full list of configuration options
+        url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
+        icon: fas fa-wrench
+        id: 3_1481_configguide
+      - title: Support
+        description: Get help with Dashy, raise a bug, or get in contact
+        url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
+        icon: far fa-hands-helping
+        id: 4_1481_support
+  - name: kuma
+    widgets:
+      - type: uptime-kuma
+        useProxy: true
+        options:
+          apiKey: uk1_x_Vm5Qx_CWUoEQhChyowE7cWWBejBO20JYZ8po62
+          url: https://uptime.abteilung.ch/metrics
+        id: 0_430_uptimekuma
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 2
+      collapsed: false
+      hideForGuests: false
+  - name: man
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items: []

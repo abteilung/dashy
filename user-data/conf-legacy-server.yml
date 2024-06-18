@@ -1,0 +1,99 @@
+pageInfo:
+  title: Legacy Server
+  description: Metrics for our Legacy Server
+sections:
+  - name: My IP
+    icon: mdi-server
+    widgets:
+      - type: public-ip
+      - type: stock-price-chart
+        options:
+          stock: AAPL
+          apiKey: A9YJX3JOPSYIFL4F
+
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: abteilung.ch
+        description: our Website
+        url: https://abteilung.ch
+        target: newtab
+      - title: coolify
+        description: Our Containered Hostings
+        url: https://app.coolify.io/
+        target: newtab
+      - title: Hetzner
+        description: Our Servers
+        url: https://accounts.hetzner.com/login
+        target: newtab
+      - title: plausible.abteilung.ch
+        url: https://plausible.abteilung.ch/
+        target: newtab
+      - title: Cron Editor
+        description: Cron editor
+        url: https://cronexpressiontogo.com/every-day-at-9am
+        target: newtab
+      - title: Random Keygen
+        url: https://randomkeygen.com/
+        target: newtab
+      - title: Pastefy
+        url: https://pastefy.abteilung.ch
+        target: newtab
+      - title: Vaultwarden
+        url: https://vaultwarden.abteilung.ch
+        target: newtab
+  - name: Getting Started
+    icon: mdi-alien
+    items:
+      - title: Dashy Live
+        description: Development a project management links for Dashy
+        icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
+        url: https://live.dashy.to/
+        target: newtab
+      - title: GitHub
+        description: Our Github Account
+        url: https://github.com/abteilung
+        icon: favicon
+      - title: Showcase
+        description: See how others are using Dashy
+        url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
+        icon: far fa-grin-hearts
+      - title: Config Guide
+        description: See full list of configuration options
+        url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
+        icon: fas fa-wrench
+      - title: Support
+        description: Get help with Dashy, raise a bug, or get in contact
+        url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
+        icon: far fa-hands-helping
+
+  - name: Load
+    widgets:
+      - type: gl-system-load
+        options:
+          hostname: https://glances.legacy.abteilung.tools
+
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 2
+      collapsed: false
+      hideForGuests: false
+    items: []
+
+  - name: Cores
+    widgets:
+      - type: gl-current-cores
+        options:
+          hostname: https://glances.legacy.abteilung.tools
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items: []
